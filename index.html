@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Anjali Tiwari — software developer. Backend, cloud, and systems."
+    />
+    <title>Anjali Tiwari</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="mast">
+        <h1>Anjali Tiwari</h1>
+        <p class="lede">Software developer at SLB. I build backend services, event-driven workflows, and things that stay up in production.</p>
+        <p class="contact">
+          <a href="mailto:anjalitiwari132003@gmail.com">anjalitiwari132003@gmail.com</a>
+          · Pune
+          ·
+          <a href="https://github.com/cannotdoit13">GitHub</a>
+          ·
+          <a href="https://linkedin.com/in/anjali-tiwari-553b02229">LinkedIn</a>
+          ·
+          <a href="resume.pdf">Resume (PDF)</a>
+        </p>
+      </header>
+
+      <section>
+        <h2>Work</h2>
+        <article class="entry">
+          <div class="entry-head">
+            <strong>Software Developer</strong>, SLB — Pune
+            <span class="when">Jul 2025 – present</span>
+          </div>
+          <ul>
+            <li>LLM-backed rule-generation service for data validation; cut manual rule work ~60%.</li>
+            <li>Shared auth library across backend services; ~40% less integration effort.</li>
+            <li>Azure Service Bus workflows with idempotent consumers, retries, DLQ; ~35% lower latency.</li>
+            <li>Kubernetes autoscaling tuned across eight production microservices.</li>
+          </ul>
+        </article>
+        <article class="entry">
+          <div class="entry-head">
+            <strong>Software Engineering Intern</strong>, SLB — Pune
+            <span class="when">May 2024 – Jul 2024</span>
+          </div>
+          <ul>
+            <li>Azure DevOps pipelines for Azure/GCP with immutable infra snapshots.</li>
+            <li>DR and audit improvements; faster incident lookup (~70%).</li>
+          </ul>
+        </article>
+      </section>
+
+      <section>
+        <h2>Projects</h2>
+        <article class="entry">
+          <div class="entry-head">
+            <strong><a href="https://github.com/cannotdoit13/local-audit">Locality Audit</a></strong>
+          </div>
+          <p class="muted">Backend for multi-source incident data, async pipelines, semantic search (PostgreSQL, pgvector, PostGIS, Redis).</p>
+        </article>
+        <article class="entry">
+          <div class="entry-head">
+            <strong>Inter IIT Tech Meet 11.0</strong> — domain NLP QA
+          </div>
+          <p class="muted">RAG service with FAISS retrieval under strict latency and memory limits.</p>
+        </article>
+      </section>
+
+      <section>
+        <h2>Education</h2>
+        <p><strong>IIT (BHU) Varanasi</strong> — B.Tech, Electronics Engineering (2025), CGPA 8.23</p>
+        <p class="muted">Manipal Public School, Lucknow — 98%, school rank 1 (2021)</p>
+      </section>
+
+      <section>
+        <h2>Elsewhere</h2>
+        <p>
+          Codeforces Specialist (max 1931) · CodeChef 6★ (max 2263) ·
+          JEE Advanced 2021 AIR 6800
+        </p>
+      </section>
+
+      <section>
+        <h2>Stack</h2>
+        <p class="tags">
+          Python, C++, Rust (learning), TypeScript · FastAPI, Postgres, Redis ·
+          Docker, Kubernetes, Azure · PyTorch, RAG, LLM APIs
+        </p>
+      </section>
+
+      <footer class="foot">
+        <p>Last updated <time id="y"></time>. This page is plain HTML on purpose.</p>
+      </footer>
+    </main>
+    <script>
+      document.getElementById("y").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
