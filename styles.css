@@ -34,15 +34,46 @@ a:hover {
 }
 
 .page {
-  max-width: 38rem;
-  margin: 0 auto;
-  padding: 2.5rem 1.25rem 4rem;
+  max-width: 100%;
+  margin: 0;
+  padding: 2.5rem 3rem 4rem;
 }
 
 .mast {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
   padding-bottom: 1.5rem;
   border-bottom: 1px solid var(--line);
   margin-bottom: 2rem;
+}
+
+.photo {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 1px solid var(--line);
+}
+
+.photo-placeholder {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  border: 1px dashed var(--muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.6rem;
+  color: var(--muted);
+  font-family: ui-monospace, monospace;
+}
+
+.mast-text {
+  flex: 1;
+  min-width: 0;
 }
 
 h1 {
@@ -137,19 +168,7 @@ li::marker {
   margin: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --text: #e8e6e3;
-    --muted: #9a9690;
-    --line: #333;
-    --link: #7eb6ff;
-    --bg: #141414;
-  }
-
-  .contact a {
-    color: var(--text);
-  }
-}
+/* dark mode removed — always light */
 
 @media print {
   body {
