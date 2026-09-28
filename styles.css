@@ -103,6 +103,15 @@ a:hover {
   padding-bottom: 1.25rem;
   border-bottom: 2px solid var(--orange);
   margin-bottom: 1.5rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.profiles {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .photo {
@@ -149,6 +158,7 @@ h1 {
   flex-wrap: wrap;
   gap: 0.5rem;
   margin-bottom: 2rem;
+  justify-content: center;
 }
 
 .tab {
