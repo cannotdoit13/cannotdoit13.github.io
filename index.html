@@ -3,37 +3,47 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="Anjali Tiwari — software developer. Backend, cloud, and systems."
-    />
+    <meta name="description" content="Anjali Tiwari — software developer. Backend, cloud, and systems." />
     <title>Anjali Tiwari</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   </head>
   <body>
+
+    <nav class="topbar">
+      <span class="topbar-name">Anjali Tiwari</span>
+      <div class="topbar-links">
+        <a href="#work">Work</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#stack">Stack</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+
     <main class="page">
+
       <header class="mast">
-        <!-- Replace this placeholder with: <img src="photo.jpg" alt="Anjali Tiwari" class="photo" /> -->
+        <!-- Replace with: <img src="photo.jpg" alt="Anjali Tiwari" class="photo" /> -->
         <div class="photo-placeholder">photo</div>
         <div class="mast-text">
-        <h1>Anjali Tiwari</h1>
-        <p class="lede">Software developer at SLB. I build backend services, event-driven workflows, and things that stay up in production.</p>
-        <p class="contact">
-          <a href="mailto:anjalitiwari132003@gmail.com">anjalitiwari132003@gmail.com</a>
-          · Pune
-          ·
-          <a href="https://github.com/cannotdoit13">GitHub</a>
-          ·
-          <a href="https://linkedin.com/in/anjali-tiwari-553b02229">LinkedIn</a>
-          ·
-          <a href="resume.pdf">Resume (PDF)</a>
-        </p>
+          <h1><u>Anjali Tiwari</u></h1>
+          <p class="lede">Software developer at SLB. I build backend services, event-driven workflows, and things that stay up in production.</p>
         </div>
       </header>
 
-      <section>
-        <h2>Work</h2>
+      <div class="profiles">
+        <a href="https://github.com/cannotdoit13" class="tab" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://linkedin.com/in/anjali-tiwari-553b02229" class="tab" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://codeforces.com/profile/cannotdoit13" class="tab" target="_blank" rel="noopener">Codeforces</a>
+        <a href="https://www.codechef.com/users/cannotdoit13" class="tab" target="_blank" rel="noopener">CodeChef</a>
+        <a href="mailto:anjalitiwari132003@gmail.com" class="tab">Email</a>
+        <a href="resume.pdf" class="tab" target="_blank" rel="noopener">Resume (PDF)</a>
+      </div>
+
+      <section id="work">
+        <h2><u>Work Experience</u></h2>
         <article class="entry">
           <div class="entry-head">
             <strong>Software Developer</strong>, SLB — Pune
@@ -58,48 +68,112 @@
         </article>
       </section>
 
-      <section>
-        <h2>Projects</h2>
+      <section id="projects">
+        <h2><u>Projects</u></h2>
+        <div class="card-grid">
+          <a href="https://github.com/cannotdoit13/local-audit" class="card" target="_blank" rel="noopener">
+            <strong>Locality Audit</strong>
+            <p>Backend for multi-source incident data, async pipelines, semantic search (PostgreSQL, pgvector, PostGIS, Redis).</p>
+            <span class="card-tag">FastAPI · Docker · DVC</span>
+          </a>
+          <div class="card">
+            <strong>Inter IIT Tech Meet 11.0</strong>
+            <p>RAG QA service with FAISS dense retrieval under strict latency and memory limits.</p>
+            <span class="card-tag">FAISS · Transformers · Python</span>
+          </div>
+          <a href="https://github.com/oji-cabs/backend" class="card" target="_blank" rel="noopener">
+            <strong>OJI Cabs Backend</strong>
+            <p>Rust/Axum ride-search backend with Postgres, SQLx migrations, and background sweepers.</p>
+            <span class="card-tag">Rust · Axum · PostgreSQL</span>
+          </a>
+          <a href="https://github.com/cannotdoit13/Fair-Code" class="card" target="_blank" rel="noopener">
+            <strong>Fair-Code</strong>
+            <p>Algorithmic bias detection and mitigation audits across five real-world datasets.</p>
+            <span class="card-tag">Python · scikit-learn · CI</span>
+          </a>
+          <div class="card card-placeholder">
+            <strong>More coming soon</strong>
+            <p>Placeholder for future projects.</p>
+          </div>
+          <div class="card card-placeholder">
+            <strong>More coming soon</strong>
+            <p>Placeholder for future projects.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="education">
+        <h2><u>Education</u></h2>
         <article class="entry">
           <div class="entry-head">
-            <strong><a href="https://github.com/cannotdoit13/local-audit">Locality Audit</a></strong>
+            <strong>IIT (BHU) Varanasi</strong> — B.Tech, Electronics Engineering
+            <span class="when">2021 – 2025</span>
           </div>
-          <p class="muted">Backend for multi-source incident data, async pipelines, semantic search (PostgreSQL, pgvector, PostGIS, Redis).</p>
+          <p>CGPA 8.23 / 10</p>
         </article>
         <article class="entry">
           <div class="entry-head">
-            <strong>Inter IIT Tech Meet 11.0</strong> — domain NLP QA
+            <strong>Manipal Public School, Lucknow</strong> — AISSCE
+            <span class="when">2021</span>
           </div>
-          <p class="muted">RAG service with FAISS retrieval under strict latency and memory limits.</p>
+          <p>98% — Ranked 1st in School</p>
         </article>
       </section>
 
-      <section>
-        <h2>Education</h2>
-        <p><strong>IIT (BHU) Varanasi</strong> — B.Tech, Electronics Engineering (2025), CGPA 8.23</p>
-        <p class="muted">Manipal Public School, Lucknow — 98%, school rank 1 (2021)</p>
+      <section id="achievements">
+        <h2><u>Achievements</u></h2>
+        <ul>
+          <li>Codeforces <strong>Specialist</strong> — max rating 1931</li>
+          <li>CodeChef <strong>6★</strong> — max rating 2263</li>
+          <li>Top 5 finish at Weldright DS Competition, Techfest IIT Bombay</li>
+          <li>JEE Advanced 2021 — AIR 6800 (top ~0.7% of ~10L candidates)</li>
+          <li>JEE Main 2021 — 99 percentile</li>
+        </ul>
       </section>
 
-      <section>
-        <h2>Elsewhere</h2>
+      <section id="stack">
+        <h2><u>Stack</u></h2>
+        <div class="tag-row">
+          <span class="pill">Python</span>
+          <span class="pill">C++</span>
+          <span class="pill">Rust</span>
+          <span class="pill">TypeScript</span>
+          <span class="pill">SQL</span>
+          <span class="pill">Bash</span>
+        </div>
+        <div class="tag-row">
+          <span class="pill">FastAPI</span>
+          <span class="pill">PostgreSQL</span>
+          <span class="pill">Redis</span>
+          <span class="pill">Docker</span>
+          <span class="pill">Kubernetes</span>
+          <span class="pill">Azure</span>
+          <span class="pill">ArgoCD</span>
+          <span class="pill">Git</span>
+        </div>
+        <div class="tag-row">
+          <span class="pill">PyTorch</span>
+          <span class="pill">RAG</span>
+          <span class="pill">OpenAI APIs</span>
+          <span class="pill">Hugging Face</span>
+          <span class="pill">DVC</span>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2><u>Contact</u></h2>
         <p>
-          Codeforces Specialist (max 1931) · CodeChef 6★ (max 2263) ·
-          JEE Advanced 2021 AIR 6800
-        </p>
-      </section>
-
-      <section>
-        <h2>Stack</h2>
-        <p class="tags">
-          Python, C++, Rust (learning), TypeScript · FastAPI, Postgres, Redis ·
-          Docker, Kubernetes, Azure · PyTorch, RAG, LLM APIs
+          <a href="mailto:anjalitiwari132003@gmail.com">anjalitiwari132003@gmail.com</a>
+          · +91 9555341275 · Pune, India
         </p>
       </section>
 
       <footer class="foot">
-        <p>Last updated <time id="y"></time>. This page is plain HTML on purpose.</p>
+        <p>Last updated <time id="y"></time></p>
       </footer>
+
     </main>
+
     <script>
       document.getElementById("y").textContent = new Date().getFullYear();
     </script>

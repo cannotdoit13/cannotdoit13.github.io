@@ -1,74 +1,130 @@
 :root {
-  --text: #1a1a1a;
+  --orange: #e07020;
+  --orange-light: #fdf3eb;
+  --orange-hover: #c55e18;
+  --white: #ffffff;
+  --text: #222;
   --muted: #555;
-  --line: #ddd;
-  --link: #0047ab;
-  --bg: #fafaf8;
+  --line: #e0d5c8;
+  --bg: #fff;
 }
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
-  font-size: 17px;
-  -webkit-text-size-adjust: 100%;
+  font-size: 16px;
+  scroll-behavior: smooth;
+  scroll-padding-top: 56px;
 }
 
 body {
-  margin: 0;
-  font-family: Georgia, "Times New Roman", serif;
-  line-height: 1.55;
+  font-family: "Times New Roman", Times, serif;
+  line-height: 1.6;
   color: var(--text);
   background: var(--bg);
 }
 
 a {
-  color: var(--link);
-  text-decoration-thickness: 1px;
+  color: var(--orange);
+  text-decoration: underline;
   text-underline-offset: 2px;
 }
 
 a:hover {
-  text-decoration: none;
+  color: var(--orange-hover);
 }
 
+/* ── Top bar ── */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--orange);
+  color: var(--white);
+  padding: 0 1.5rem;
+  height: 48px;
+  font-size: 0.85rem;
+}
+
+.topbar-name {
+  font-weight: bold;
+  font-size: 1rem;
+  letter-spacing: 0.01em;
+}
+
+.topbar-links {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.topbar-links a {
+  color: var(--white);
+  text-decoration: none;
+  font-size: 0.82rem;
+}
+
+.topbar-links a:hover {
+  text-decoration: underline;
+  color: var(--white);
+}
+
+@media (max-width: 640px) {
+  .topbar {
+    flex-direction: column;
+    height: auto;
+    padding: 0.6rem 1rem;
+    gap: 0.3rem;
+  }
+
+  .topbar-links {
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+}
+
+/* ── Page ── */
 .page {
   max-width: 100%;
-  margin: 0;
-  padding: 2.5rem 3rem 4rem;
+  padding: 2rem 2.5rem 3rem;
 }
 
+/* ── Header / mast ── */
 .mast {
   display: flex;
   gap: 1.5rem;
-  align-items: flex-start;
-  padding-bottom: 1.5rem;
-  border-bottom: 1px solid var(--line);
-  margin-bottom: 2rem;
+  align-items: center;
+  padding-bottom: 1.25rem;
+  border-bottom: 2px solid var(--orange);
+  margin-bottom: 1.5rem;
 }
 
 .photo {
-  width: 90px;
-  height: 90px;
+  width: 96px;
+  height: 96px;
   border-radius: 50%;
   object-fit: cover;
   flex-shrink: 0;
-  border: 1px solid var(--line);
+  border: 2px solid var(--orange);
 }
 
 .photo-placeholder {
-  width: 90px;
-  height: 90px;
+  width: 96px;
+  height: 96px;
   border-radius: 50%;
   flex-shrink: 0;
-  border: 1px dashed var(--muted);
+  border: 2px dashed var(--orange);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.6rem;
+  font-size: 0.7rem;
   color: var(--muted);
-  font-family: ui-monospace, monospace;
 }
 
 .mast-text {
@@ -77,111 +133,178 @@ a:hover {
 }
 
 h1 {
-  font-size: 1.75rem;
-  font-weight: normal;
-  letter-spacing: -0.02em;
-  margin: 0 0 0.75rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 0.4rem;
 }
 
 .lede {
-  margin: 0 0 1rem;
-  font-size: 1rem;
-}
-
-.contact {
-  margin: 0;
-  font-family: ui-monospace, "Cascadia Code", "Consolas", monospace;
-  font-size: 0.72rem;
-  line-height: 1.7;
+  font-size: 0.95rem;
   color: var(--muted);
 }
 
-.contact a {
-  color: var(--text);
+/* ── Profile tabs ── */
+.profiles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.tab {
+  display: inline-block;
+  padding: 0.4rem 0.9rem;
+  background: var(--orange-light);
+  border: 1px solid var(--orange);
+  border-radius: 4px;
+  color: var(--orange);
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: bold;
+  transition: background 0.15s, color 0.15s;
+}
+
+.tab:hover {
+  background: var(--orange);
+  color: var(--white);
+}
+
+/* ── Sections ── */
+section {
+  margin-bottom: 2rem;
 }
 
 h2 {
-  font-family: ui-sans-serif, system-ui, sans-serif;
-  font-size: 0.7rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--muted);
-  margin: 2rem 0 0.75rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--orange);
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid var(--line);
 }
 
-section:first-of-type h2 {
-  margin-top: 0;
-}
-
+/* ── Entries (work / edu) ── */
 .entry {
-  margin-bottom: 1.25rem;
+  margin-bottom: 1rem;
 }
 
 .entry-head {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 0.25rem 1rem;
-  margin-bottom: 0.35rem;
+  gap: 0.2rem 1rem;
+  margin-bottom: 0.25rem;
 }
 
 .when {
-  font-family: ui-monospace, monospace;
-  font-size: 0.72rem;
+  font-size: 0.78rem;
   color: var(--muted);
 }
 
 ul {
-  margin: 0;
-  padding-left: 1.15rem;
+  padding-left: 1.1rem;
 }
 
 li {
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.3rem;
 }
 
 li::marker {
-  color: var(--muted);
+  color: var(--orange);
 }
 
-.muted {
+/* ── Project cards ── */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 0.75rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--white);
+  text-decoration: none;
+  color: var(--text);
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+a.card:hover {
+  border-color: var(--orange);
+  box-shadow: 0 2px 8px rgba(224, 112, 32, 0.12);
+}
+
+.card strong {
+  font-size: 0.95rem;
+  color: var(--orange);
+}
+
+.card p {
+  font-size: 0.85rem;
   color: var(--muted);
   margin: 0;
-  font-size: 0.95rem;
+  flex: 1;
 }
 
-.tags {
-  margin: 0;
-  font-size: 0.95rem;
-}
-
-.foot {
-  margin-top: 3rem;
-  padding-top: 1rem;
+.card-tag {
+  font-size: 0.7rem;
+  color: var(--muted);
   border-top: 1px solid var(--line);
-  font-size: 0.8rem;
+  padding-top: 0.4rem;
+  margin-top: auto;
+}
+
+.card-placeholder {
+  border-style: dashed;
+  opacity: 0.5;
+}
+
+/* ── Skill pills ── */
+.tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.pill {
+  display: inline-block;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.78rem;
+  border: 1px solid var(--orange);
+  border-radius: 3px;
+  color: var(--orange);
+  background: var(--orange-light);
+}
+
+/* ── Footer ── */
+.foot {
+  margin-top: 2rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.75rem;
   color: var(--muted);
 }
 
-.foot p {
-  margin: 0;
-}
-
-/* dark mode removed — always light */
-
+/* ── Print ── */
 @media print {
-  body {
-    background: #fff;
-    color: #000;
+  .topbar {
+    display: none;
   }
 
   .page {
-    max-width: none;
     padding: 0;
   }
 
   a {
     color: #000;
+  }
+
+  .card {
+    break-inside: avoid;
   }
 }
