@@ -9,7 +9,7 @@
     />
     <meta name="theme-color" content="#fff8ef" />
     <title>Anjali Tiwari — Software Engineer</title>
-    <link rel="stylesheet" href="styles.css?v=2" />
+    <link rel="stylesheet" href="styles.css?v=3" />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   </head>
   <body>
@@ -48,20 +48,14 @@
           </div>
         </div>
 
-        <div class="hero-visual" aria-label="A playful illustration representing thoughtful engineering">
-          <span class="orbit orbit-one" aria-hidden="true"></span>
-          <span class="orbit orbit-two" aria-hidden="true"></span>
-          <div class="avatar-card">
-            <div class="avatar-face" aria-hidden="true">
-              <span class="eye eye-left"></span>
-              <span class="eye eye-right"></span>
-              <span class="smile"></span>
-            </div>
-            <p><span>currently thinking about</span> reliable systems &amp; useful AI</p>
-          </div>
-          <span class="float-note note-one" aria-hidden="true">ship ✦ learn</span>
-          <span class="float-note note-two" aria-hidden="true">keep it kind</span>
-        </div>
+        <aside class="focus-card" aria-label="Engineering priorities">
+          <p class="eyebrow">What I care about</p>
+          <ol>
+            <li><span>01</span><strong>Reliable by design</strong><small>Failure modes considered before production.</small></li>
+            <li><span>02</span><strong>Useful over impressive</strong><small>Simple systems that solve the actual problem.</small></li>
+            <li><span>03</span><strong>Clear to the next person</strong><small>Code, decisions, and context that travel well.</small></li>
+          </ol>
+        </aside>
       </header>
 
       <section class="numbers" aria-label="Highlights">
@@ -181,26 +175,13 @@
 
         <div class="scenario-shell">
           <div class="scenario-picker" role="group" aria-label="Choose an engineering situation">
-            <button class="scenario-button active" type="button" data-scenario="fuzzy" aria-pressed="true">
-              <span aria-hidden="true">⌁</span> The problem is fuzzy
-            </button>
-            <button class="scenario-button" type="button" data-scenario="incident" aria-pressed="false">
-              <span aria-hidden="true">⚡</span> Production is on fire
-            </button>
-            <button class="scenario-button" type="button" data-scenario="disagreement" aria-pressed="false">
-              <span aria-hidden="true">⇄</span> The team disagrees
-            </button>
-            <button class="scenario-button" type="button" data-scenario="stuck" aria-pressed="false">
-              <span aria-hidden="true">✦</span> A teammate is stuck
-            </button>
+            <button class="scenario-button active" type="button" data-scenario="fuzzy" aria-pressed="true">The problem is fuzzy</button>
+            <button class="scenario-button" type="button" data-scenario="incident" aria-pressed="false">Production is on fire</button>
+            <button class="scenario-button" type="button" data-scenario="disagreement" aria-pressed="false">The team disagrees</button>
+            <button class="scenario-button" type="button" data-scenario="stuck" aria-pressed="false">A teammate is stuck</button>
           </div>
 
           <article class="scenario-card" aria-live="polite">
-            <div class="scenario-character" aria-hidden="true">
-              <span id="scenario-emoji">?</span>
-              <i class="spark spark-one"></i>
-              <i class="spark spark-two"></i>
-            </div>
             <div class="scenario-copy">
               <p class="scenario-label">My move</p>
               <h3 id="scenario-title">Ask until the problem is crisp.</h3>
@@ -257,28 +238,24 @@
     <script>
       const scenarios = {
         fuzzy: {
-          emoji: "?",
           title: "Ask until the problem is crisp.",
           description:
             "I map constraints, separate assumptions from facts, and write down the decision we are actually trying to make. Clarity is often the first useful deliverable.",
           traits: ["curiosity", "structured thinking", "communication"],
         },
         incident: {
-          emoji: "!",
           title: "Calm first, clever later.",
           description:
             "I stabilize the system, make ownership explicit, and keep updates short and regular. After recovery, I turn what we learned into a kinder system for the next person on call.",
           traits: ["composure", "ownership", "clear updates"],
         },
         disagreement: {
-          emoji: "↔",
           title: "Trade opinions for evidence.",
           description:
             "I surface the assumptions behind each option, agree on decision criteria, and make space for quieter voices. The goal is not to win—it is to leave with a decision everyone can execute.",
           traits: ["active listening", "facilitation", "decisiveness"],
         },
         stuck: {
-          emoji: "✦",
           title: "Unblock without taking over.",
           description:
             "I pair long enough to shrink the problem, share context rather than just an answer, and leave the next step with its original owner. Good support should build confidence.",
@@ -288,7 +265,6 @@
 
       const card = document.querySelector(".scenario-card");
       const buttons = document.querySelectorAll(".scenario-button");
-      const emoji = document.getElementById("scenario-emoji");
       const title = document.getElementById("scenario-title");
       const description = document.getElementById("scenario-description");
       const traits = document.getElementById("scenario-traits");
@@ -302,9 +278,6 @@
             item.setAttribute("aria-pressed", String(selected));
           });
 
-          card.classList.remove("scenario-enter");
-          void card.offsetWidth;
-          emoji.textContent = scenario.emoji;
           title.textContent = scenario.title;
           description.textContent = scenario.description;
           traits.replaceChildren(
@@ -314,7 +287,6 @@
               return item;
             }),
           );
-          card.classList.add("scenario-enter");
         });
       });
 
