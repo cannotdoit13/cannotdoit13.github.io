@@ -3,179 +3,322 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Anjali Tiwari — software developer. Backend, cloud, and systems." />
-    <title>Anjali Tiwari</title>
+    <meta
+      name="description"
+      content="Anjali Tiwari — software engineer building dependable backend systems, cloud infrastructure, and developer tools."
+    />
+    <meta name="theme-color" content="#fff8ef" />
+    <title>Anjali Tiwari — Software Engineer</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   </head>
   <body>
-
-    <nav class="topbar">
-      <span class="topbar-name">Anjali Tiwari</span>
+    <nav class="topbar" aria-label="Primary navigation">
+      <a class="brand" href="#top" aria-label="Back to top">
+        <span class="brand-mark" aria-hidden="true">A</span>
+        <span>Anjali Tiwari</span>
+      </a>
       <div class="topbar-links">
         <a href="#work">Work</a>
         <a href="#projects">Projects</a>
-        <a href="#education">Education</a>
-        <a href="#achievements">Achievements</a>
+        <a href="#collaboration">How I work</a>
         <a href="#stack">Stack</a>
-        <a href="#contact">Contact</a>
       </div>
+      <a class="nav-cta" href="mailto:anjalitiwari132003@gmail.com">Say hello <span aria-hidden="true">↗</span></a>
     </nav>
 
-    <main class="page">
+    <main class="page" id="top">
+      <header class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="status-dot"></span> Software engineer · Pune, India</p>
+          <h1>I make complex systems feel <span class="scribble">calm.</span></h1>
+          <p class="lede">
+            Hi, I'm Anjali. I build dependable backend services, cloud infrastructure,
+            and developer tools—with a soft spot for clear systems and kinder teamwork.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#projects">See what I build <span aria-hidden="true">↓</span></a>
+            <a class="button button-secondary" href="resume.pdf" target="_blank" rel="noopener">Read my résumé</a>
+          </div>
+          <div class="profile-links" aria-label="Social links">
+            <a href="https://github.com/cannotdoit13" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://linkedin.com/in/anjali-tiwari-553b02229" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://codeforces.com/profile/cannotdoit13" target="_blank" rel="noopener">Codeforces</a>
+            <a href="https://www.codechef.com/users/cannotdoit13" target="_blank" rel="noopener">CodeChef</a>
+          </div>
+        </div>
 
-      <header class="mast">
-        <!-- Replace with: <img src="photo.jpg" alt="Anjali Tiwari" class="photo" /> -->
-        <div class="photo-placeholder">photo</div>
-        <div class="mast-text">
-          <h1><u>Anjali Tiwari</u></h1>
-          <p class="lede">Hi, I'm Anjali. I graduated from IIT BHU in Electronics but have always leaned towards coding. Currently working as SDE-1 at SLB, building backend services and cloud infrastructure.</p>
+        <div class="hero-visual" aria-label="A playful illustration representing thoughtful engineering">
+          <span class="orbit orbit-one" aria-hidden="true"></span>
+          <span class="orbit orbit-two" aria-hidden="true"></span>
+          <div class="avatar-card">
+            <div class="avatar-face" aria-hidden="true">
+              <span class="eye eye-left"></span>
+              <span class="eye eye-right"></span>
+              <span class="smile"></span>
+            </div>
+            <p><span>currently thinking about</span> reliable systems &amp; useful AI</p>
+          </div>
+          <span class="float-note note-one" aria-hidden="true">ship ✦ learn</span>
+          <span class="float-note note-two" aria-hidden="true">keep it kind</span>
         </div>
       </header>
 
-      <div class="profiles">
-        <a href="https://github.com/cannotdoit13" class="tab" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://linkedin.com/in/anjali-tiwari-553b02229" class="tab" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://codeforces.com/profile/cannotdoit13" class="tab" target="_blank" rel="noopener">Codeforces</a>
-        <a href="https://www.codechef.com/users/cannotdoit13" class="tab" target="_blank" rel="noopener">CodeChef</a>
-        <a href="mailto:anjalitiwari132003@gmail.com" class="tab">Email</a>
-        <a href="resume.pdf" class="tab" target="_blank" rel="noopener">Resume (PDF)</a>
-      </div>
+      <section class="numbers" aria-label="Highlights">
+        <div><strong>8</strong><span>production services tuned</span></div>
+        <div><strong>35%</strong><span>workflow latency reduced</span></div>
+        <div><strong>60%</strong><span>manual rule work reduced</span></div>
+        <div><strong>6★</strong><span>CodeChef peak</span></div>
+      </section>
 
-      <section id="work">
-        <h2><u>Work Experience</u></h2>
-        <article class="entry">
-          <div class="entry-head">
-            <strong>Software Developer</strong>, SLB — Pune
-            <span class="when">Jul 2025 – present</span>
+      <section id="work" class="section">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Where I've contributed</p>
+            <h2>Work experience</h2>
           </div>
-          <ul>
-            <li>LLM-backed rule-generation service for data validation; cut manual rule work ~60%.</li>
-            <li>Shared auth library across backend services; ~40% less integration effort.</li>
-            <li>Azure Service Bus workflows with idempotent consumers, retries, DLQ; ~35% lower latency.</li>
-            <li>Kubernetes autoscaling tuned across eight production microservices.</li>
+          <p>Building for reliability, from the API boundary to the deployment layer.</p>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-meta">
+              <p class="role">Software Developer</p>
+              <p>SLB · Pune</p>
+              <time>Jul 2025 — present</time>
+            </div>
+            <ul class="impact-list">
+              <li>Built an LLM-backed rule-generation service that cut manual validation work by about 60%.</li>
+              <li>Created a shared authentication library, reducing integration effort across backend services by about 40%.</li>
+              <li>Designed idempotent Azure Service Bus workflows with retries and DLQs, lowering latency by about 35%.</li>
+              <li>Tuned Kubernetes autoscaling across eight production microservices.</li>
+            </ul>
+          </article>
+          <article class="timeline-item">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-meta">
+              <p class="role">Software Engineering Intern</p>
+              <p>SLB · Pune</p>
+              <time>May 2024 — Jul 2024</time>
+            </div>
+            <ul class="impact-list">
+              <li>Built Azure DevOps pipelines for Azure and GCP with immutable infrastructure snapshots.</li>
+              <li>Improved disaster-recovery audits and made incident lookup about 70% faster.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="projects" class="section">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Things I've made</p>
+            <h2>Selected projects</h2>
+          </div>
+          <p>Experiments where backend engineering meets developer experience.</p>
+        </div>
+
+        <div class="project-grid">
+          <a href="https://github.com/cannotdoit13/local-audit" class="project-card featured" target="_blank" rel="noopener">
+            <span class="project-number">01</span>
+            <div>
+              <p class="project-kind">Incident intelligence</p>
+              <h3>Locality Audit <span aria-hidden="true">↗</span></h3>
+              <p>Multi-source incident pipelines with semantic and geospatial search for faster investigations.</p>
+            </div>
+            <ul class="tech-list" aria-label="Technologies">
+              <li>FastAPI</li><li>PostgreSQL</li><li>pgvector</li><li>Docker</li>
+            </ul>
+          </a>
+
+          <a href="https://github.com/cannotdoit13/pipeline-board-hub" class="project-card" target="_blank" rel="noopener">
+            <span class="project-number">02</span>
+            <div>
+              <p class="project-kind">Developer experience</p>
+              <h3>Pipeline Board Hub <span aria-hidden="true">↗</span></h3>
+              <p>One view for pipeline failures, board work, and AI-assisted task planning.</p>
+            </div>
+            <ul class="tech-list" aria-label="Technologies">
+              <li>TypeScript</li><li>GitHub Apps</li><li>SQLite</li>
+            </ul>
+          </a>
+
+          <a href="https://github.com/cannotdoit13/maintenance-debt-radar" class="project-card" target="_blank" rel="noopener">
+            <span class="project-number">03</span>
+            <div>
+              <p class="project-kind">Reliability tooling</p>
+              <h3>Maintenance Debt Radar <span aria-hidden="true">↗</span></h3>
+              <p>A tool for finding flaky systems and turning maintenance signals into priorities.</p>
+            </div>
+            <ul class="tech-list" aria-label="Technologies">
+              <li>Fastify</li><li>Prisma</li><li>PostgreSQL</li>
+            </ul>
+          </a>
+
+          <a href="https://github.com/oji-cabs/backend" class="project-card" target="_blank" rel="noopener">
+            <span class="project-number">04</span>
+            <div>
+              <p class="project-kind">Systems backend</p>
+              <h3>OJI Cabs <span aria-hidden="true">↗</span></h3>
+              <p>A ride-search backend with typed database access and background sweepers.</p>
+            </div>
+            <ul class="tech-list" aria-label="Technologies">
+              <li>Rust</li><li>Axum</li><li>SQLx</li>
+            </ul>
+          </a>
+        </div>
+      </section>
+
+      <section id="collaboration" class="section collaboration">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Soft skills, shown—not listed</p>
+            <h2>How I show up on a team</h2>
+          </div>
+          <p>Pick a real engineering situation to see how I approach it.</p>
+        </div>
+
+        <div class="scenario-shell">
+          <div class="scenario-picker" role="group" aria-label="Choose an engineering situation">
+            <button class="scenario-button active" type="button" data-scenario="fuzzy" aria-pressed="true">
+              <span aria-hidden="true">⌁</span> The problem is fuzzy
+            </button>
+            <button class="scenario-button" type="button" data-scenario="incident" aria-pressed="false">
+              <span aria-hidden="true">⚡</span> Production is on fire
+            </button>
+            <button class="scenario-button" type="button" data-scenario="disagreement" aria-pressed="false">
+              <span aria-hidden="true">⇄</span> The team disagrees
+            </button>
+            <button class="scenario-button" type="button" data-scenario="stuck" aria-pressed="false">
+              <span aria-hidden="true">✦</span> A teammate is stuck
+            </button>
+          </div>
+
+          <article class="scenario-card" aria-live="polite">
+            <div class="scenario-character" aria-hidden="true">
+              <span id="scenario-emoji">?</span>
+              <i class="spark spark-one"></i>
+              <i class="spark spark-two"></i>
+            </div>
+            <div class="scenario-copy">
+              <p class="scenario-label">My move</p>
+              <h3 id="scenario-title">Ask until the problem is crisp.</h3>
+              <p id="scenario-description">
+                I map constraints, separate assumptions from facts, and write down the decision
+                we are actually trying to make. Clarity is often the first useful deliverable.
+              </p>
+              <div class="scenario-traits" id="scenario-traits">
+                <span>curiosity</span><span>structured thinking</span><span>communication</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section split-section">
+        <div id="stack" class="info-card">
+          <p class="eyebrow">My toolkit</p>
+          <h2>Stack</h2>
+          <div class="tag-cloud">
+            <span>Python</span><span>Rust</span><span>TypeScript</span><span>C++</span>
+            <span>FastAPI</span><span>PostgreSQL</span><span>Redis</span><span>Docker</span>
+            <span>Kubernetes</span><span>Azure</span><span>ArgoCD</span><span>RAG</span>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <p class="eyebrow">The origin story</p>
+          <h2>Education &amp; milestones</h2>
+          <ul class="milestone-list">
+            <li><span>2025</span><p><strong>IIT (BHU) Varanasi</strong><br />B.Tech, Electronics Engineering · 8.23/10</p></li>
+            <li><span>6★</span><p><strong>CodeChef</strong><br />Peak rating 2263</p></li>
+            <li><span>1931</span><p><strong>Codeforces Specialist</strong><br />Peak competitive-programming rating</p></li>
+            <li><span>Top 5</span><p><strong>Weldright DS Competition</strong><br />Techfest, IIT Bombay</p></li>
           </ul>
-        </article>
-        <article class="entry">
-          <div class="entry-head">
-            <strong>Software Engineering Intern</strong>, SLB — Pune
-            <span class="when">May 2024 – Jul 2024</span>
-          </div>
-          <ul>
-            <li>Azure DevOps pipelines for Azure/GCP with immutable infra snapshots.</li>
-            <li>DR and audit improvements; faster incident lookup (~70%).</li>
-          </ul>
-        </article>
-      </section>
-
-      <section id="projects">
-        <h2><u>Projects</u></h2>
-        <div class="card-grid">
-          <a href="https://github.com/cannotdoit13/local-audit" class="card" target="_blank" rel="noopener">
-            <strong>Locality Audit</strong>
-            <p>Backend for multi-source incident data, async pipelines, semantic search (PostgreSQL, pgvector, PostGIS, Redis).</p>
-            <span class="card-tag">FastAPI · Docker · DVC</span>
-          </a>
-          <div class="card">
-            <strong>Inter IIT Tech Meet 11.0</strong>
-            <p>RAG QA service with FAISS dense retrieval under strict latency and memory limits.</p>
-            <span class="card-tag">FAISS · Transformers · Python</span>
-          </div>
-          <a href="https://github.com/oji-cabs/backend" class="card" target="_blank" rel="noopener">
-            <strong>OJI Cabs Backend</strong>
-            <p>Rust/Axum ride-search backend with Postgres, SQLx migrations, and background sweepers.</p>
-            <span class="card-tag">Rust · Axum · PostgreSQL</span>
-          </a>
-          <a href="https://github.com/cannotdoit13/Fair-Code" class="card" target="_blank" rel="noopener">
-            <strong>Fair-Code</strong>
-            <p>Algorithmic bias detection and mitigation audits across five real-world datasets.</p>
-            <span class="card-tag">Python · scikit-learn · CI</span>
-          </a>
-          <div class="card card-placeholder">
-            <strong>More coming soon</strong>
-            <p>Placeholder for future projects.</p>
-          </div>
-          <div class="card card-placeholder">
-            <strong>More coming soon</strong>
-            <p>Placeholder for future projects.</p>
-          </div>
         </div>
       </section>
 
-      <section id="education">
-        <h2><u>Education</u></h2>
-        <article class="entry">
-          <div class="entry-head">
-            <strong>IIT (BHU) Varanasi</strong> — B.Tech, Electronics Engineering
-            <span class="when">2021 – 2025</span>
-          </div>
-          <p>CGPA 8.23 / 10</p>
-        </article>
-        <article class="entry">
-          <div class="entry-head">
-            <strong>Manipal Public School, Lucknow</strong> — AISSCE
-            <span class="when">2021</span>
-          </div>
-          <p>98% — Ranked 1st in School</p>
-        </article>
-      </section>
-
-      <section id="achievements">
-        <h2><u>Achievements</u></h2>
-        <ul>
-          <li>Codeforces <strong>Specialist</strong> — max rating 1931</li>
-          <li>CodeChef <strong>6★</strong> — max rating 2263</li>
-          <li>Top 5 finish at Weldright DS Competition, Techfest IIT Bombay</li>
-          <li>JEE Advanced 2021 — AIR 6800 (top ~0.7% of ~10L candidates)</li>
-          <li>JEE Main 2021 — 99 percentile</li>
-        </ul>
-      </section>
-
-      <section id="stack">
-        <h2><u>Stack</u></h2>
-        <div class="tag-row">
-          <span class="pill">Python</span>
-          <span class="pill">C++</span>
-          <span class="pill">Rust</span>
-          <span class="pill">TypeScript</span>
-          <span class="pill">SQL</span>
-          <span class="pill">Bash</span>
+      <section id="contact" class="contact-card">
+        <div>
+          <p class="eyebrow">Let's build something thoughtful</p>
+          <h2>Have an interesting problem?</h2>
+          <p>I’m always happy to talk about backend systems, developer tooling, or a delightfully difficult bug.</p>
         </div>
-        <div class="tag-row">
-          <span class="pill">FastAPI</span>
-          <span class="pill">PostgreSQL</span>
-          <span class="pill">Redis</span>
-          <span class="pill">Docker</span>
-          <span class="pill">Kubernetes</span>
-          <span class="pill">Azure</span>
-          <span class="pill">ArgoCD</span>
-          <span class="pill">Git</span>
-        </div>
-        <div class="tag-row">
-          <span class="pill">PyTorch</span>
-          <span class="pill">RAG</span>
-          <span class="pill">OpenAI APIs</span>
-          <span class="pill">Hugging Face</span>
-          <span class="pill">DVC</span>
-        </div>
-      </section>
-
-      <section id="contact">
-        <h2><u>Contact</u></h2>
-        <p>
-          <a href="mailto:anjalitiwari132003@gmail.com">anjalitiwari132003@gmail.com</a>
-          · +91 9555341275 · Pune, India
-        </p>
+        <a class="button button-light" href="mailto:anjalitiwari132003@gmail.com">Start a conversation <span aria-hidden="true">↗</span></a>
       </section>
 
       <footer class="foot">
-        <p>Last updated <time id="y"></time></p>
+        <p>Designed and built with care by Anjali.</p>
+        <p>Last updated <time id="year"></time> · <a href="#top">Back to top ↑</a></p>
       </footer>
-
     </main>
 
     <script>
-      document.getElementById("y").textContent = new Date().getFullYear();
+      const scenarios = {
+        fuzzy: {
+          emoji: "?",
+          title: "Ask until the problem is crisp.",
+          description:
+            "I map constraints, separate assumptions from facts, and write down the decision we are actually trying to make. Clarity is often the first useful deliverable.",
+          traits: ["curiosity", "structured thinking", "communication"],
+        },
+        incident: {
+          emoji: "!",
+          title: "Calm first, clever later.",
+          description:
+            "I stabilize the system, make ownership explicit, and keep updates short and regular. After recovery, I turn what we learned into a kinder system for the next person on call.",
+          traits: ["composure", "ownership", "clear updates"],
+        },
+        disagreement: {
+          emoji: "↔",
+          title: "Trade opinions for evidence.",
+          description:
+            "I surface the assumptions behind each option, agree on decision criteria, and make space for quieter voices. The goal is not to win—it is to leave with a decision everyone can execute.",
+          traits: ["active listening", "facilitation", "decisiveness"],
+        },
+        stuck: {
+          emoji: "✦",
+          title: "Unblock without taking over.",
+          description:
+            "I pair long enough to shrink the problem, share context rather than just an answer, and leave the next step with its original owner. Good support should build confidence.",
+          traits: ["mentorship", "empathy", "knowledge sharing"],
+        },
+      };
+
+      const card = document.querySelector(".scenario-card");
+      const buttons = document.querySelectorAll(".scenario-button");
+      const emoji = document.getElementById("scenario-emoji");
+      const title = document.getElementById("scenario-title");
+      const description = document.getElementById("scenario-description");
+      const traits = document.getElementById("scenario-traits");
+
+      buttons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const scenario = scenarios[button.dataset.scenario];
+          buttons.forEach((item) => {
+            const selected = item === button;
+            item.classList.toggle("active", selected);
+            item.setAttribute("aria-pressed", String(selected));
+          });
+
+          card.classList.remove("scenario-enter");
+          void card.offsetWidth;
+          emoji.textContent = scenario.emoji;
+          title.textContent = scenario.title;
+          description.textContent = scenario.description;
+          traits.replaceChildren(
+            ...scenario.traits.map((trait) => {
+              const item = document.createElement("span");
+              item.textContent = trait;
+              return item;
+            }),
+          );
+          card.classList.add("scenario-enter");
+        });
+      });
+
+      document.getElementById("year").textContent = new Date().getFullYear();
     </script>
   </body>
 </html>
